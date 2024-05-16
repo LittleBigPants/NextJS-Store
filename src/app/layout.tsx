@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
-import { Header } from "./store/components/shared/Header";
-import { Footer } from "./store/components/shared/Footer";
+import { Header } from "../components/shared/Header";
+import { Footer } from "../components/shared/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
