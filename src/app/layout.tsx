@@ -1,14 +1,9 @@
-import type { Metadata } from "next";
+"use client";
+
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
-
+import { Header } from "./store/components/Header";
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-	title: "Future World",
-	description: "Future ecommerce",
-};
 
 export default function RootLayout({
 	children,
@@ -17,21 +12,8 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
-				<header>
-					<nav>
-						<ul>
-							<Link href="/">
-								<li>Home</li>
-							</Link>
-							<Link href="/store">
-								<li>Store</li>
-							</Link>
-						</ul>
-					</nav>
-				</header>
-				{children}
-			</body>
+			<body className={inter.className}><Header />{children}</body>
+			
 		</html>
 	);
 }
